@@ -5,6 +5,7 @@ A pre-configured react-three-fiber environment for demos and examples.
 ## Features
 
 - A fully pre-configured react-three-fiber environment for demos and examples, with camera, lights, environment, orbit controls and postprocessing already set up for you.
+- If you have multiple examples, it'll provide a navigation UI and a loading indicator while examples are being lazy-loaded.
 - Comes with [Leva](https://github.com/pmndrs/leva) for easy user controls.
 
 ## Usage
