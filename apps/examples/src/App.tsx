@@ -17,7 +17,7 @@ const examples: Examples = {
       <FlatStage position-y={-1.5}>
         <mesh position-y={1.5} castShadow>
           <dodecahedronGeometry />
-          <meshStandardMaterial />
+          <meshStandardMaterial metalness={0.3} roughness={0.5} color="#e9c46a" />
         </mesh>
       </FlatStage>
     )
@@ -39,7 +39,7 @@ const examples: Examples = {
     Example: () => (
       <mesh>
         <sphereGeometry />
-        <meshStandardMaterial />
+        <meshStandardMaterial metalness={0.3} roughness={0.5} color="#ff595e" />
       </mesh>
     )
   }

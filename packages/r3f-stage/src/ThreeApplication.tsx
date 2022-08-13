@@ -37,6 +37,10 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
     performance
   })
 
+  const presentation = useControls("Presentation", {
+    autoRotate: { value: 0, min: -10, max: 10 }
+  })
+
   const ContextBridge = useContextBridge(ApplicationContext)
 
   const { examples } = useApplicationContext()
@@ -89,6 +93,8 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
             minDistance={3}
             minPolarAngle={0}
             maxPolarAngle={Math.PI * 0.48}
+            autoRotate
+            autoRotateSpeed={presentation.autoRotate}
           />
 
           {/* Examples */}
