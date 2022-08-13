@@ -90,6 +90,10 @@ const Dodecahedron = {
 
 Please note that the modules you lazyload this way **must provide the component as their default export**.
 
+### Stages
+
+_TODO_
+
 ## LICENSE
 
 ```

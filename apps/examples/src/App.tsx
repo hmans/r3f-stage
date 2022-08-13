@@ -1,4 +1,4 @@
-import { Application } from "r3f-stage"
+import { Application, FlatStage } from "r3f-stage"
 import { Examples } from "r3f-stage/src/Example"
 import { lazy } from "react"
 
@@ -14,10 +14,12 @@ const examples: Examples = {
       </p>
     ),
     Example: () => (
-      <mesh>
-        <dodecahedronGeometry />
-        <meshStandardMaterial />
-      </mesh>
+      <FlatStage>
+        <mesh>
+          <dodecahedronGeometry />
+          <meshStandardMaterial />
+        </mesh>
+      </FlatStage>
     )
   },
 
