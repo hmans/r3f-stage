@@ -12,6 +12,7 @@
   "module": "dist/r3f-stage.esm.js",
   "types": "dist/r3f-stage.cjs.d.ts",
   "files": [
+    "styles.css",
     "dist/**",
     "LICENSE",
     "README.md"

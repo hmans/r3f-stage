@@ -1,7 +1,6 @@
 import React, { createContext, FC, useContext } from "react"
 import { Redirect, useRoute } from "wouter"
 import { Example, Examples } from "./Example"
-import "./styles.css"
 import { ThreeApplication, ThreeApplicationProps } from "./ThreeApplication"
 import { UI } from "./ui/UI"
 

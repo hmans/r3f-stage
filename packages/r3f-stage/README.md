@@ -29,14 +29,15 @@ yarn install -D @types/three
 yarn install @react-three/drei
 ```
 
-Please be aware that `r3f-stage` will import its own global CSS. For best results, please make sure that your application doesn't define its own global CSS.
-
 ### Hello World
 
 Now you can import `Application` from `r3f-stage` and use it to quickly whip up a fully-working Three.js app. Just place the usual react-three-fiber things into the component's children:
 
 ```tsx
 import { Application } from "r3f-stage"
+
+/* r3f-stage provides a global stylesheet. Please import it in your application and remove any other global styles you may have defined. */
+import "r3f-stage/styles.css"
 
 function App() {
   return (

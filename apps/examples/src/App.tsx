@@ -1,6 +1,7 @@
 import { Application, FlatStage } from "r3f-stage"
 import { Examples } from "r3f-stage/src/Example"
 import { lazy } from "react"
+import "r3f-stage/styles.css"
 
 const examples: Examples = {
   Dodecahedron: {
