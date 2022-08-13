@@ -2,7 +2,7 @@ import React from "react"
 import { Example } from "../Example"
 
 export const Description = ({ example }: { example: Example }) => (
-  <div style={{ position: "fixed", bottom: 20, left: 20, zIndex: 1 }}>
+  <div className="panel" style={{ bottom: 20, left: 20 }}>
     {example.Description && <example.Description />}
   </div>
 )
