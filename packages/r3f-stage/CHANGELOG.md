@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.2.4
+
+### Patch Changes
+
+- 9649aeb: Fix redirect on reload.
+
 ## 0.2.3
 
 ### Patch Changes
