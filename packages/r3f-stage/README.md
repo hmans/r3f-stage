@@ -12,7 +12,7 @@ A pre-configured react-three-fiber environment for demos and examples.
 
 ### Installing the library
 
-`r3f-stage` makes use of Three.js and React Three Fiber, but only lists them as peer dependencies, so you'll need to install them separately.
+> **Note:** `r3f-stage` makes use of Three.js and React Three Fiber, but only lists them as peer dependencies, so you'll need to install them separately. (If we don't do it this way, they might end up being installed twice, running as two different versions of the same library, and that would be bad.)
 
 In your freshly created Vite/CRA React app:
 
