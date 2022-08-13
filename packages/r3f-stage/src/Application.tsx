@@ -5,10 +5,10 @@ import React, { FC, ReactNode, Suspense } from "react"
 import "../styles.css"
 import { Example, Examples } from "./Example"
 import { Layers } from "./Layers"
-import { Navigation } from "./Navigation"
+import { Navigation } from "./ui/Navigation"
 import { RenderComposer } from "./render-composer"
 import { Spinner } from "./Spinner"
-import { UI } from "./UI"
+import { UI } from "./ui/UI"
 
 export const Application: FC<{
   children?: ReactNode

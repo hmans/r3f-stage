@@ -1,5 +1,5 @@
 import React, { FC } from "react"
-import { Examples } from "./Example"
+import { Examples } from "../Example"
 import { Navigation } from "./Navigation"
 
 export const UI: FC<{ examples?: Examples }> = ({ examples }) => {
