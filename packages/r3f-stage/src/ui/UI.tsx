@@ -9,7 +9,11 @@ export const UI = () => {
   return (
     <>
       {examples && <Navigation examples={examples} />}
-      {currentExample && <Description example={currentExample} />}
+      {currentExample?.Description && (
+        <Description>
+          <currentExample.Description />
+        </Description>
+      )}
     </>
   )
 }
