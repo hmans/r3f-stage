@@ -1,51 +1,13 @@
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei"
-import { useFrame } from "@react-three/fiber"
 import { Leva, useControls } from "leva"
 import { Perf } from "r3f-perf"
-import React, { FC, ReactNode, Suspense, useRef } from "react"
-import { Mesh } from "three"
-import { Link, useRoute } from "wouter"
+import React, { FC, ReactNode, Suspense } from "react"
 import "../styles.css"
+import { Example, Examples } from "./Example"
 import { Layers } from "./Layers"
+import { Navigation } from "./Navigation"
 import { RenderComposer } from "./render-composer"
-
-function Navigation({ examples }: { examples: Examples }) {
-  return (
-    <div style={{ position: "fixed", top: 10, left: 10, zIndex: 1 }}>
-      {Object.entries(examples).map(([name, _]) => (
-        <Link to={`/examples/${name}`} key={name}>
-          {name}
-        </Link>
-      ))}
-    </div>
-  )
-}
-
-function Example({ examples }: { examples: Examples }) {
-  const [match, params] = useRoute("/examples/:name")
-  const name = match ? params.name : "HelloWorld"
-  const Component = examples[name as keyof typeof examples]
-
-  return <Component />
-}
-
-export type Examples = Record<string, any>
-
-const Spinner = () => {
-  const mesh = useRef<Mesh>(null!)
-
-  useFrame(({ clock }, dt) => {
-    const a = Math.pow((Math.sin(clock.elapsedTime * 7) + 2) * 0.5, 3)
-    mesh.current.rotation.y += (1 + a) * dt
-  })
-
-  return (
-    <mesh ref={mesh} scale={0.2}>
-      <dodecahedronGeometry />
-      <meshStandardMaterial color="#666" />
-    </mesh>
-  )
-}
+import { Spinner } from "./Spinner"
 
 export const Application: FC<{
   children?: ReactNode
