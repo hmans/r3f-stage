@@ -13,12 +13,12 @@ import { UI } from "./UI"
 export const Application: FC<{
   children?: ReactNode
   examples?: Examples
-  performance?: boolean
-}> = ({ children, examples, performance = false }) => {
+}> = ({ children, examples }) => {
   /* Let the user control some aspects of the application. */
   const opts = useControls("Rendering", {
     dpr: { value: 1, min: 0.125, max: 2 },
-    postProcessing: true
+    effects: true,
+    performance: true
   })
 
   return (
@@ -29,10 +29,12 @@ export const Application: FC<{
       {/* Render the actual scene */}
       <RenderComposer
         dpr={opts.dpr}
-        bloom={opts.postProcessing}
-        vignette={opts.postProcessing}
-        antiAliasing={opts.postProcessing}
+        bloom={opts.effects}
+        vignette={opts.effects}
+        antiAliasing={opts.effects}
       >
+        {opts.performance && <Perf position="bottom-right" />}
+
         <color args={["#333"]} attach="background" />
         <Suspense>
           <fogExp2 args={["#000", 0.03]} attach="fog" />
@@ -62,8 +64,6 @@ export const Application: FC<{
             minPolarAngle={Math.PI * 0.25}
             maxPolarAngle={Math.PI * 0.75}
           />
-
-          {performance && <Perf position="bottom-right" />}
 
           <Suspense fallback={<Spinner />}>
             {examples && <Example examples={examples} />}

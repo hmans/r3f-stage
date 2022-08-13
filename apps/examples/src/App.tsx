@@ -32,7 +32,7 @@ const examples: Examples = {
 }
 
 function App() {
-  return <Application examples={examples} performance />
+  return <Application examples={examples} />
 }
 
 export default App
