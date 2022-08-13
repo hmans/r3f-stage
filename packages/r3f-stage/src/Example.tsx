@@ -1,5 +1,5 @@
 import React from "react"
-import { useRoute } from "wouter"
+import { Redirect, useRoute } from "wouter"
 
 export type Example = {
   title?: string
@@ -11,10 +11,12 @@ export type Examples = Record<string, Example>
 
 export function Example({ examples }: { examples: Examples }) {
   const [match, params] = useRoute("/examples/:slug")
-  const slug = match ? params.slug : Object.entries(examples)[0][0]
 
-  const example = examples[slug]
-  const Component = example.render
+  if (!match || !examples[params.slug]) {
+    const firstExampleSlug = Object.entries(examples)[0][0]
+    return <Redirect to={`/examples/${firstExampleSlug}`} />
+  }
 
+  const Component = examples[params.slug].render
   return <Component />
 }
