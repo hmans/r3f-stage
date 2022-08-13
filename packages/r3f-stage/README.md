@@ -51,6 +51,10 @@ function App() {
 
 _TODO_
 
+### Lazy-loading Examples
+
+_TODO_
+
 ### Overriding Defaults
 
 _TODO_
