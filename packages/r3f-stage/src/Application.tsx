@@ -8,6 +8,7 @@ import { Layers } from "./Layers"
 import { Navigation } from "./Navigation"
 import { RenderComposer } from "./render-composer"
 import { Spinner } from "./Spinner"
+import { UI } from "./UI"
 
 export const Application: FC<{
   children?: ReactNode
@@ -22,11 +23,8 @@ export const Application: FC<{
 
   return (
     <>
-      {/* Mount Leva */}
       <Leva />
-
-      {/* Render Examples Navigation */}
-      {examples && <Navigation examples={examples} />}
+      <UI examples={examples} />
 
       {/* Render the actual scene */}
       <RenderComposer
