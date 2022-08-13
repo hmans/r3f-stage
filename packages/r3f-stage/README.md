@@ -8,6 +8,7 @@ A pre-configured react-three-fiber environment for demos and examples.
 - If you have multiple examples, it'll provide a navigation UI and a loading indicator while examples are being lazy-loaded.
 - Allows the user to control the current resolution of the renderer, and toggle post-processing effects on and off.
 - Comes with [Leva](https://github.com/pmndrs/leva) for easy user controls.
+- No tracking, analytics, or other externally loaded dependencies.
 
 ## Usage
 
