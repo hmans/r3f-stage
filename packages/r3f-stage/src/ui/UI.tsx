@@ -1,4 +1,3 @@
-import { Leva } from "leva"
 import React from "react"
 import { useApplicationContext } from "../Application"
 import { Description } from "./Description"
