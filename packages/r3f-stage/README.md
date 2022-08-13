@@ -92,6 +92,10 @@ Please note that the modules you lazyload this way **must provide the component 
 
 ### Stages
 
+R3F Stage exports a collection of stage components you can embed your examples into:
+
+- `<FlatStage>`
+
 _TODO_
 
 ## LICENSE
