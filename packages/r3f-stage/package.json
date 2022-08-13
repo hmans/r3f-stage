@@ -74,6 +74,7 @@
     "@react-three/drei": "^9.21.0",
     "leva": "^0.9.30",
     "postprocessing": "^6.28.5",
-    "r3f-perf": "^6.4.2"
+    "r3f-perf": "^6.4.2",
+    "wouter": "^2.8.0-alpha.2"
   }
 }
