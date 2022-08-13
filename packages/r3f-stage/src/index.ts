@@ -1,3 +1,5 @@
 export { Application } from "./Application"
-export { type Examples, Example } from "./Example"
+export { type Example, type Examples } from "./Example"
+export { Layers } from "./Layers"
+export { useRenderPipeline } from "./render-composer"
 export * from "./stages"
