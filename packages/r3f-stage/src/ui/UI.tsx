@@ -1,14 +1,17 @@
 import { Leva } from "leva"
 import React from "react"
 import { useApplicationContext } from "../Application"
+import { Description } from "./Description"
 import { Navigation } from "./Navigation"
 
 export const UI = () => {
-  const { examples } = useApplicationContext()
+  const { examples, currentExample } = useApplicationContext()
+
   return (
     <>
       <Leva />
       {examples && <Navigation examples={examples} />}
+      {currentExample && <Description example={currentExample} />}
     </>
   )
 }

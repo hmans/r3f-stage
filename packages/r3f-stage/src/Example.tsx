@@ -4,8 +4,8 @@ import { useApplicationContext } from "./Application"
 
 export type Example = {
   title?: string
-  description?: string
-  render: React.FunctionComponent
+  Description?: React.FunctionComponent
+  Example: React.FunctionComponent
 }
 
 export type Examples = Record<string, Example>
@@ -21,6 +21,6 @@ export function Example() {
     return <Redirect to={`/examples/${firstExampleSlug}`} />
   }
 
-  const Component = examples[params.slug].render
+  const Component = examples[params.slug].Example
   return <Component />
 }
