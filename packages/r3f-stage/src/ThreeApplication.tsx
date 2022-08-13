@@ -89,7 +89,7 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
           {/* Camera Controls */}
           <OrbitControls
             makeDefault
-            maxDistance={10}
+            maxDistance={30}
             minDistance={3}
             minPolarAngle={0}
             maxPolarAngle={Math.PI * 0.48}
