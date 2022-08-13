@@ -29,6 +29,9 @@ export const Application: FC<ApplicationProps> = ({ examples, ...props }) => {
 }
 
 const RedirectToDefaultExample = () => {
-  const { examples } = useApplicationContext()
-  return <Redirect to={examples ? `/examples/${Object.entries(examples)[0][0]}` : "/"} />
+  const { examples, currentExample } = useApplicationContext()
+
+  return currentExample ? null : (
+    <Redirect to={examples ? `/examples/${Object.entries(examples)[0][0]}` : "/"} />
+  )
 }
