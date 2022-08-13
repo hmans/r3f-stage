@@ -1,5 +1,5 @@
 import React, { createContext, FC, useContext } from "react"
-import { useRoute } from "wouter"
+import { Redirect, useRoute } from "wouter"
 import "../styles.css"
 import { Example, Examples } from "./Example"
 import { ThreeApplication, ThreeApplicationProps } from "./ThreeApplication"
@@ -11,13 +11,6 @@ export const ApplicationContext = createContext<{
 }>({})
 
 export const useApplicationContext = () => useContext(ApplicationContext)
-
-// export const useCurrentExample = () => {
-//   const { examples } = useApplicationContext()
-//   const [match, params] = useRoute("/examples/:slug");
-//   if (!match) return null
-
-// }
 
 export type ApplicationProps = {
   examples?: Examples
@@ -31,6 +24,12 @@ export const Application: FC<ApplicationProps> = ({ examples, ...props }) => {
     <ApplicationContext.Provider value={{ examples, currentExample }}>
       <UI />
       <ThreeApplication {...props} />
+      <RedirectToDefaultExample />
     </ApplicationContext.Provider>
   )
+}
+
+const RedirectToDefaultExample = () => {
+  const { examples } = useApplicationContext()
+  return <Redirect to={examples ? `/examples/${Object.entries(examples)[0][0]}` : "/"} />
 }
