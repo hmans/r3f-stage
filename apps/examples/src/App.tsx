@@ -1,19 +1,23 @@
 import { Application } from "r3f-stage"
 
 const examples = {
-  Dodecahedron: () => (
-    <mesh>
-      <dodecahedronGeometry />
-      <meshStandardMaterial />
-    </mesh>
-  ),
+  Dodecahedron: {
+    render: () => (
+      <mesh>
+        <dodecahedronGeometry />
+        <meshStandardMaterial />
+      </mesh>
+    )
+  },
 
-  Icosahedron: () => (
-    <mesh>
-      <icosahedronGeometry />
-      <meshStandardMaterial />
-    </mesh>
-  )
+  Icosahedron: {
+    render: () => (
+      <mesh>
+        <icosahedronGeometry />
+        <meshStandardMaterial />
+      </mesh>
+    )
+  }
 }
 
 function App() {
