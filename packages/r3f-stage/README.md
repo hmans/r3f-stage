@@ -1,4 +1,4 @@
-# r3f-stage
+# R3F Stage
 
 A pre-configured react-three-fiber environment for demos and examples.
 
