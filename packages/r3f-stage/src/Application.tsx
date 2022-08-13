@@ -12,11 +12,11 @@ export type ApplicationProps = {
   examples?: Examples
 } & ThreeApplicationProps
 
-export const Application: FC<ApplicationProps> = ({ children, examples, ...props }) => {
+export const Application: FC<ApplicationProps> = ({ examples, ...props }) => {
   return (
     <ApplicationContext.Provider value={{ examples }}>
       <UI />
-      <ThreeApplication {...props}>{children}</ThreeApplication>
+      <ThreeApplication {...props} />
     </ApplicationContext.Provider>
   )
 }
