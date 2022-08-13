@@ -43,6 +43,7 @@ canvas {
 /* Panels */
 
 div.panel {
+  padding: 20px;
   position: fixed;
   z-index: 1;
 }
