@@ -2,6 +2,10 @@
 
 A pre-configured react-three-fiber environment for demos and examples.
 
+## Features
+
+- Yes
+
 ## Usage
 
 In your freshly created React app:
