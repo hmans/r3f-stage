@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.2.6
+
+### Patch Changes
+
+- fca82cd: Move peer dependencies into dependencies to simplify usage.
+
 ## 0.2.5
 
 ### Patch Changes
