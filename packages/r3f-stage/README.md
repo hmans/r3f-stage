@@ -11,7 +11,7 @@ A pre-configured react-three-fiber environment for demos and examples.
 
 ## Usage
 
-### Installing the library
+### Installing the Library
 
 > **Note:** `r3f-stage` makes use of Three.js and React Three Fiber, but only lists them as peer dependencies, so you'll need to install them separately. (If we don't do it this way, they might end up being installed twice, running as two different versions of the same library, and that would be bad.)
 
@@ -30,7 +30,7 @@ yarn install @react-three/drei
 
 ### Hello World
 
-Now you can import `Application` from `r3f-stage` and use it to quickly whip up a fully-working Three.js app:
+Now you can import `Application` from `r3f-stage` and use it to quickly whip up a fully-working Three.js app. Just place the usual react-three-fiber things into the component's children:
 
 ```tsx
 import { Application } from "r3f-stage"
@@ -46,6 +46,14 @@ function App() {
   )
 }
 ```
+
+### Multiple Examples
+
+_TODO_
+
+### Overriding Defaults
+
+_TODO_
 
 ## LICENSE
 
