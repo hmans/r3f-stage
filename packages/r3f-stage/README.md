@@ -94,7 +94,18 @@ Please note that the modules you lazyload this way **must provide the component 
 
 R3F Stage exports a collection of stage components you can embed your examples into:
 
-- `<FlatStage>`
+```tsx
+const Dodecahedron = {
+  Example: () => (
+    <FlatStage>
+      <mesh>
+        <dodecahedronGeometry />
+        <meshStandardMaterial />
+      </mesh>
+    </FlatStage>
+  )
+}
+```
 
 _TODO_
 
