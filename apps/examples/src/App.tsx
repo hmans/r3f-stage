@@ -3,7 +3,7 @@ import { Examples } from "r3f-stage/src/Example"
 
 const examples: Examples = {
   Dodecahedron: {
-    title: "Mwhahahahedron",
+    description: "Lorem to the ipsum.",
     render: () => (
       <mesh>
         <dodecahedronGeometry />
@@ -19,11 +19,20 @@ const examples: Examples = {
         <meshStandardMaterial />
       </mesh>
     )
+  },
+
+  Sphere: {
+    render: () => (
+      <mesh>
+        <sphereGeometry />
+        <meshStandardMaterial />
+      </mesh>
+    )
   }
 }
 
 function App() {
-  return <Application examples={examples}></Application>
+  return <Application examples={examples} performance />
 }
 
 export default App
