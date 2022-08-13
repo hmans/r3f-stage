@@ -1,7 +1,14 @@
-import React, { FC } from "react"
-import { Examples } from "../Example"
+import { Leva } from "leva"
+import React from "react"
+import { useApplicationContext } from "../Application"
 import { Navigation } from "./Navigation"
 
-export const UI: FC<{ examples?: Examples }> = ({ examples }) => {
-  return <>{examples && <Navigation examples={examples} />}</>
+export const UI = () => {
+  const { examples } = useApplicationContext()
+  return (
+    <>
+      <Leva />
+      {examples && <Navigation examples={examples} />}
+    </>
+  )
 }

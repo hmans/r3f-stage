@@ -1,5 +1,6 @@
 import React from "react"
 import { Redirect, useRoute } from "wouter"
+import { useApplicationContext } from "./Application"
 
 export type Example = {
   title?: string
@@ -9,7 +10,10 @@ export type Example = {
 
 export type Examples = Record<string, Example>
 
-export function Example({ examples }: { examples: Examples }) {
+export function Example() {
+  const { examples } = useApplicationContext()
+  if (!examples) return null
+
   const [match, params] = useRoute("/examples/:slug")
 
   if (!match || !examples[params.slug]) {
