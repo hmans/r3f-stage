@@ -1,5 +1,4 @@
 import { Box, Environment, OrbitControls } from "@react-three/drei"
-import { Canvas } from "@react-three/fiber"
 import { R3FStage } from "r3f-stage"
 import "r3f-stage/styles.css"
 
