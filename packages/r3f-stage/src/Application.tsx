@@ -7,7 +7,6 @@ import { Mesh } from "three"
 import { Link, useRoute } from "wouter"
 import { Layers } from "./Layers"
 import { RenderComposer } from "./render-composer"
-import Stage from "./Stage"
 
 function Navigation({ examples }: { examples: Examples }) {
   return (
@@ -47,7 +46,7 @@ const Spinner = () => {
   )
 }
 
-export const Venue: FC<{
+export const Application: FC<{
   children?: ReactNode
   examples?: Examples
   performance?: boolean
