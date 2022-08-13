@@ -1,5 +1,6 @@
 import { Application } from "r3f-stage"
 import { Examples } from "r3f-stage/src/Example"
+import { lazy } from "react"
 
 const examples: Examples = {
   Dodecahedron: {
@@ -28,12 +29,7 @@ const examples: Examples = {
         (hédra) 'seat'. The plural can be either "icosahedra" (/-drə/) or "icosahedrons".
       </>
     ),
-    Example: () => (
-      <mesh>
-        <icosahedronGeometry />
-        <meshStandardMaterial />
-      </mesh>
-    )
+    Example: lazy(() => import("./examples/IcosahedronExample"))
   },
 
   Sphere: {
