@@ -11,8 +11,14 @@ A pre-configured react-three-fiber environment for demos and examples.
 In your freshly created React app:
 
 ```sh
+# Mandatory
 yarn install three @react-three/fiber r3f-stage
+
+# Types
 yarn install -D @types/three
+
+# Useful R3F utility components
+yarn install @react-three/drei
 ```
 
 ## LICENSE
