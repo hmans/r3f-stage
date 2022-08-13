@@ -51,7 +51,7 @@ export const Application: FC<{
   children?: ReactNode
   examples?: Examples
   performance?: boolean
-}> = ({ children, examples, performance = true }) => {
+}> = ({ children, examples, performance = false }) => {
   const opts = useControls("Rendering", {
     dpr: { value: 1, min: 0.125, max: 2 },
     postProcessing: true

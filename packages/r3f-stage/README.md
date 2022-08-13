@@ -4,7 +4,8 @@ A pre-configured react-three-fiber environment for demos and examples.
 
 ## Features
 
-- Yes
+- A fully pre-configured react-three-fiber environment for demos and examples, with camera, lights, environment, orbit controls and postprocessing already set up for you.
+- Comes with [Leva](https://github.com/pmndrs/leva) for easy user controls.
 
 ## Usage
 
@@ -42,6 +43,14 @@ function App() {
     </Application>
   )
 }
+```
+
+### Enabling Performance Monitoring
+
+`<Application>` optionally provides performance monitoring powered by [ref-perf](https://github.com/utsuboco/r3f-perf). You can enable it by passing the `performance` prop:
+
+```tsx
+<Application performance>
 ```
 
 ## LICENSE
