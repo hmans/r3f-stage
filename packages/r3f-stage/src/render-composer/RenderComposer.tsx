@@ -13,7 +13,6 @@ export const RenderComposer = ({
 }: RenderComposerProps) => (
   <Canvas
     shadows
-    linear
     flat
     gl={{
       powerPreference: "high-performance",
