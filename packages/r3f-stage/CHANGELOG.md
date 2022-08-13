@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.2.2
+
+### Patch Changes
+
+- 867045d: Export `Layers` and `useRenderPipeline`.
+
 ## 0.2.1
 
 ### Patch Changes
