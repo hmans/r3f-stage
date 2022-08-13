@@ -9,7 +9,6 @@ export const UI = () => {
 
   return (
     <>
-      <Leva />
       {examples && <Navigation examples={examples} />}
       {currentExample && <Description example={currentExample} />}
     </>
