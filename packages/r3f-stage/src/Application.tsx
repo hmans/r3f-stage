@@ -1,6 +1,6 @@
 import { Environment, OrbitControls, PerspectiveCamera } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
-import { useControls } from "leva"
+import { Leva, useControls } from "leva"
 import { Perf } from "r3f-perf"
 import React, { FC, ReactNode, Suspense, useRef } from "react"
 import { Mesh } from "three"
@@ -58,6 +58,7 @@ export const Application: FC<{
 
   return (
     <>
+      <Leva />
       {examples && <Navigation examples={examples} />}
       <RenderComposer
         dpr={opts.dpr}
