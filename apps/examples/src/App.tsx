@@ -14,7 +14,7 @@ const examples: Examples = {
       </p>
     ),
     Example: () => (
-      <FlatStage position-y={-1.5}>
+      <FlatStage>
         <mesh position-y={1.5} castShadow>
           <dodecahedronGeometry />
           <meshStandardMaterial metalness={0.3} roughness={0.5} color="#e9c46a" />
