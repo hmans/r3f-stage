@@ -1,5 +1,6 @@
-import React, { GroupProps } from "@react-three/fiber"
+import { GroupProps } from "@react-three/fiber"
 import { ColorRepresentation } from "three"
+import React from "react"
 
 export type FlatStageProps = GroupProps & { color?: ColorRepresentation }
 
