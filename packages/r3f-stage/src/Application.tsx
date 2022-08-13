@@ -35,6 +35,7 @@ export const Application: FC<{
         vignette={opts.postProcessing}
         antiAliasing={opts.postProcessing}
       >
+        <color args={["#333"]} attach="background" />
         <Suspense>
           <fogExp2 args={["#000", 0.03]} attach="fog" />
           <ambientLight intensity={0.2} />
