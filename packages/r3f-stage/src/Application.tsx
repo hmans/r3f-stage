@@ -1,13 +1,13 @@
-import { Environment, OrbitControls, PerspectiveCamera } from "@react-three/drei"
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
 import { Leva, useControls } from "leva"
 import { Perf } from "r3f-perf"
 import React, { FC, ReactNode, Suspense, useRef } from "react"
 import { Mesh } from "three"
 import { Link, useRoute } from "wouter"
+import "../styles.css"
 import { Layers } from "./Layers"
 import { RenderComposer } from "./render-composer"
-import "../styles.css"
 
 function Navigation({ examples }: { examples: Examples }) {
   return (
@@ -68,7 +68,6 @@ export const Application: FC<{
         antiAliasing={opts.postProcessing}
       >
         <Suspense>
-          <Environment preset="city" />
           <fogExp2 args={["#000", 0.03]} attach="fog" />
           <ambientLight intensity={0.2} />
           <directionalLight
