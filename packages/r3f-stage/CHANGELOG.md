@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.2.3
+
+### Patch Changes
+
+- b5a3fd3: Fixed Leva sizing issues.
+
 ## 0.2.2
 
 ### Patch Changes
