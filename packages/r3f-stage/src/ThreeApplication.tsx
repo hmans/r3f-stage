@@ -13,12 +13,14 @@ export type ThreeApplicationProps = {
   performance?: boolean
   effects?: boolean
   dpr?: number
+  lights?: boolean
 }
 export const ThreeApplication: FC<ThreeApplicationProps> = ({
   children,
   performance = false,
   effects = true,
-  dpr = 1
+  dpr = 1,
+  lights = true
 }) => {
   /* Let the user control some aspects of the application. */
   const opts = useControls("Rendering", {
@@ -47,19 +49,23 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
           <fogExp2 args={["#222", 0.03]} attach="fog" />
 
           {/* Lights */}
-          <ambientLight intensity={0.2} />
-          <directionalLight
-            color="white"
-            intensity={0.7}
-            position={[10, 10, 10]}
-            castShadow
-          />
-          <directionalLight
-            color="white"
-            intensity={0.2}
-            position={[-10, 5, 10]}
-            castShadow
-          />
+          {lights && (
+            <>
+              <ambientLight intensity={0.2} />
+              <directionalLight
+                color="white"
+                intensity={0.7}
+                position={[10, 10, 10]}
+                castShadow
+              />
+              <directionalLight
+                color="white"
+                intensity={0.2}
+                position={[-10, 5, 10]}
+                castShadow
+              />
+            </>
+          )}
 
           {/* Camera */}
           <PerspectiveCamera
