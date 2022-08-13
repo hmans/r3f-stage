@@ -5,13 +5,13 @@ import "r3f-stage/styles.css"
 
 function App() {
   return (
-    <Canvas>
+    <R3FStage>
       <Environment preset="sunset" />
       <Box>
         <meshStandardMaterial />
       </Box>
       <OrbitControls />
-    </Canvas>
+    </R3FStage>
   )
 }
 
