@@ -7,6 +7,7 @@ import { Mesh } from "three"
 import { Link, useRoute } from "wouter"
 import { Layers } from "./Layers"
 import { RenderComposer } from "./render-composer"
+import "../styles.css"
 
 function Navigation({ examples }: { examples: Examples }) {
   return (
