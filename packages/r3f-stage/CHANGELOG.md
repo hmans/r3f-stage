@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.2.5
+
+### Patch Changes
+
+- 0a357ed: Increase maximum distance of OrbitControls to 30.
+
 ## 0.2.4
 
 ### Patch Changes
