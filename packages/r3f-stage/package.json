@@ -13,7 +13,6 @@
   "types": "dist/r3f-stage.cjs.d.ts",
   "files": [
     "dist/**",
-    "styles.css",
     "LICENSE",
     "README.md"
   ],
