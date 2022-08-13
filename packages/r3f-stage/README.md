@@ -52,15 +52,43 @@ function App() {
 
 ### Multiple Examples
 
-_TODO_
+If you want to present multiple examples within the same application, you can pass an `examples` prop to `<Application>`. This prop is expected to be an object containing example definitions.
+
+Each property's key will be the URL slug to the example.
+
+The example's optional `title` property will be used as the title of the example in the navigation UI. (If omitted, the key will be used as the title.)
+
+You can provide an optional `Description` React component that will be rendered as the example's description when it's being viewed by the user.
+
+But most importantly, you must provide an `Example` React component. This component should render the actual example.
+
+```tsx
+const Dodecahedron = {
+  Description: () => <p>This is a dodecahedron.</p>,
+  Example: () => (
+    <mesh>
+      <dodecahedronGeometry />
+      <meshStandardMaterial />
+    </mesh>
+  )
+}
+
+function App() {
+  return <Application examples={{ Dodecahedron }} />
+}
+```
 
 ### Lazy-loading Examples
 
-_TODO_
+You can lazy-load individual examples using the `React.lazy` helper. The application is already configured to show a loading spinner while examples are being lazy-loaded.
 
-### Overriding Defaults
+```tsx
+const Dodecahedron = {
+  Example: React.lazy(() => import("./examples/DodecahedronExample"))
+}
+```
 
-_TODO_
+Please note that the modules you lazyload this way **must provide the component as their default export**.
 
 ## LICENSE
 
