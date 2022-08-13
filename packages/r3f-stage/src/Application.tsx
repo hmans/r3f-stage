@@ -13,12 +13,15 @@ import { UI } from "./UI"
 export const Application: FC<{
   children?: ReactNode
   examples?: Examples
-}> = ({ children, examples }) => {
+  performance?: boolean
+  effects?: boolean
+  dpr?: number
+}> = ({ children, examples, effects = true, performance = false, dpr = 1 }) => {
   /* Let the user control some aspects of the application. */
   const opts = useControls("Rendering", {
-    dpr: { value: 1, min: 0.125, max: 2 },
-    effects: true,
-    performance: true
+    dpr: { value: dpr, min: 0.125, max: 2 },
+    effects,
+    performance
   })
 
   return (
