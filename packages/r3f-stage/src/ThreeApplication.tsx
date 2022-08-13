@@ -10,9 +10,17 @@ import { Spinner } from "./Spinner"
 
 export type ThreeApplicationProps = {
   children?: ReactNode
+
+  /* Enable performance monitor by default. */
   performance?: boolean
+
+  /* Enable post-processing effects by default. */
   effects?: boolean
+
+  /* Default DPR. */
   dpr?: number
+
+  /* Enable default lights. */
   lights?: boolean
 }
 export const ThreeApplication: FC<ThreeApplicationProps> = ({
