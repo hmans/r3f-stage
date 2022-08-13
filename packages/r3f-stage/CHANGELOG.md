@@ -1,0 +1,7 @@
+# r3f-stage
+
+## 0.2.0
+
+### Minor Changes
+
+- 19fc8b3: Complete rework of the library, with the new code extracted from the shader-composer project.
