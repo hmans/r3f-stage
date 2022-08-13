@@ -52,6 +52,7 @@ export const Application: FC<{
   examples?: Examples
   performance?: boolean
 }> = ({ children, examples, performance = false }) => {
+  /* Let the user control some aspects of the application. */
   const opts = useControls("Rendering", {
     dpr: { value: 1, min: 0.125, max: 2 },
     postProcessing: true
