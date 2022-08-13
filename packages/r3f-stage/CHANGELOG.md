@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.2.1
+
+### Patch Changes
+
+- d54b840: Fixed a faulty import in `FlatStage`.
+
 ## 0.2.0
 
 ### Minor Changes
