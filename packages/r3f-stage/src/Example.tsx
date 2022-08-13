@@ -1,8 +1,8 @@
-import React, { FC } from "react"
+import React from "react"
 import { useRoute } from "wouter"
 
 export type Example = {
-  name: string
+  title?: string
   description?: string
   render: React.FunctionComponent
 }
@@ -10,10 +10,10 @@ export type Example = {
 export type Examples = Record<string, Example>
 
 export function Example({ examples }: { examples: Examples }) {
-  const [match, params] = useRoute("/examples/:name")
-  const name = match ? params.name : Object.entries(examples)[0][0]
+  const [match, params] = useRoute("/examples/:slug")
+  const slug = match ? params.slug : Object.entries(examples)[0][0]
 
-  const example = examples[name as keyof typeof examples]
+  const example = examples[slug]
   const Component = example.render
 
   return <Component />

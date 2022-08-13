@@ -22,8 +22,13 @@ export const Application: FC<{
 
   return (
     <>
+      {/* Mount Leva */}
       <Leva />
+
+      {/* Render Examples Navigation */}
       {examples && <Navigation examples={examples} />}
+
+      {/* Render the actual scene */}
       <RenderComposer
         dpr={opts.dpr}
         bloom={opts.postProcessing}

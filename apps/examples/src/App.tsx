@@ -1,7 +1,9 @@
 import { Application } from "r3f-stage"
+import { Examples } from "r3f-stage/src/Example"
 
-const examples = {
+const examples: Examples = {
   Dodecahedron: {
+    title: "Mwhahahahedron",
     render: () => (
       <mesh>
         <dodecahedronGeometry />
