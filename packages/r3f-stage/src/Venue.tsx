@@ -98,8 +98,6 @@ export const Venue: FC<{
 
           {performance && <Perf position="bottom-right" />}
 
-          <Stage />
-
           <Suspense fallback={<Spinner />}>
             {examples && <Example examples={examples} />}
           </Suspense>
