@@ -6440,11 +6440,6 @@ stack-utils@^2.0.3:
   dependencies:
     escape-string-regexp "^2.0.0"
 
-statery@^0.5.4:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/statery/-/statery-0.5.4.tgz#a48fcb68e2e99aa769a65c638094ea8ac774fc44"
-  integrity sha512-AqOOGAVqz7kFBeA+EHzrj9rlv7jW3Sy0fqnxz4BImXqslU5cyv6b8ds8FCumGaUDdTWN5tdxmBLhuX+4jrZMzw==
-
 static-extend@^0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/static-extend/-/static-extend-0.1.2.tgz#60809c39cbff55337226fd5e0b520f341f1fb5c6"

@@ -69,8 +69,8 @@
     ]
   },
   "dependencies": {
-    "statery": "^0.5.4",
-    "wouter": "^2.8.0-alpha.2"
+    "wouter": "^2.8.0-alpha.2",
+    "zustand": "^3.6.9"
   },
   "peerDependencies": {
     "@react-three/drei": "^9.22.7",

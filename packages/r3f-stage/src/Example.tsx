@@ -1,7 +1,6 @@
 import React, { ReactNode, Suspense } from "react"
 import { Link, Redirect, Route } from "wouter"
 import { Spinner } from "./Spinner"
-import { FlatStage } from "./stages"
 import { navigationPortal } from "./ui/UI"
 
 export type ExampleProps = {
@@ -16,9 +15,9 @@ export const Example = ({ children, path, title, makeDefault = false }: ExampleP
 
   return (
     <>
-      <navigationPortal.Add>
+      <navigationPortal.In>
         <Link to={url}>{title || path}</Link>
-      </navigationPortal.Add>
+      </navigationPortal.In>
 
       <Route path={url}>
         <Suspense fallback={<Spinner />}>{children}</Suspense>

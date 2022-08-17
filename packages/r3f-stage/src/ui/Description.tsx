@@ -5,10 +5,10 @@ export type DescriptionProps = { children: React.ReactNode }
 
 export const Description = ({ children }: DescriptionProps) => {
   return (
-    <uiPortal.Add>
+    <uiPortal.In>
       <div className="panel" style={{ bottom: 0, left: 0 }}>
         {children}
       </div>
-    </uiPortal.Add>
+    </uiPortal.In>
   )
 }
