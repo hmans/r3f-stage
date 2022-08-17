@@ -1,0 +1,9 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "examples": "0.0.0",
+    "r3f-stage": "0.2.6"
+  },
+  "changesets": []
+}
