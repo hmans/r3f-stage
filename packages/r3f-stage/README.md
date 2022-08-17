@@ -2,8 +2,6 @@
 
 A pre-configured react-three-fiber environment for demos and examples.
 
-![image](https://user-images.githubusercontent.com/1061/185150441-7532e841-673d-47da-9af2-588469eba818.png)
-
 ## Features
 
 - A fully pre-configured react-three-fiber environment for demos and examples, with camera, lights, environment, orbit controls, postprocessing and performance monitoring already set up for you.
@@ -11,6 +9,10 @@ A pre-configured react-three-fiber environment for demos and examples.
 - Allows the user to control the current resolution of the renderer, and toggle post-processing effects on and off.
 - Comes with [Leva](https://github.com/pmndrs/leva) for easy user controls.
 - No tracking, analytics, or other externally loaded dependencies.
+
+## What does it look like?
+
+[![image](https://user-images.githubusercontent.com/1061/185150441-7532e841-673d-47da-9af2-588469eba818.png)](https://r3f-stage.vercel.app/)
 
 ## Usage
 
