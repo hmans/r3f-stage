@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.3.0-next.6
+
+### Patch Changes
+
+- ef34b65: Move leva and r3f-perf back into deps
+
 ## 0.3.0-next.5
 
 ### Patch Changes
