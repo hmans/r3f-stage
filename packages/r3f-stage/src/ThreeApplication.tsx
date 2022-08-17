@@ -47,53 +47,54 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
       vignette={opts.effects}
       antiAliasing={opts.effects}
     >
+      {/* Performance Monitor */}
       {opts.performance && <Perf position="bottom-right" />}
 
+      {/* Background color */}
       <color args={["#222"]} attach="background" />
-      <Suspense>
-        {/* Fog */}
-        <fogExp2 args={["#222", 0.03]} attach="fog" />
 
-        {/* Lights */}
-        {lights && (
-          <>
-            <ambientLight intensity={0.2} />
-            <directionalLight
-              color="white"
-              intensity={0.7}
-              position={[10, 10, 10]}
-              castShadow
-            />
-            <directionalLight
-              color="white"
-              intensity={0.2}
-              position={[-10, 5, 10]}
-              castShadow
-            />
-          </>
-        )}
+      {/* Fog */}
+      <fogExp2 args={["#222", 0.03]} attach="fog" />
 
-        {/* Camera */}
-        <PerspectiveCamera
-          position={[0, 2, 8]}
-          layers-mask={Layers.Default + Layers.TransparentFX}
-          makeDefault
-        />
+      {/* Lights */}
+      {lights && (
+        <>
+          <ambientLight intensity={0.2} />
+          <directionalLight
+            color="white"
+            intensity={0.7}
+            position={[10, 10, 10]}
+            castShadow
+          />
+          <directionalLight
+            color="white"
+            intensity={0.2}
+            position={[-10, 5, 10]}
+            castShadow
+          />
+        </>
+      )}
 
-        {/* Camera Controls */}
-        <OrbitControls
-          makeDefault
-          maxDistance={30}
-          minDistance={3}
-          minPolarAngle={0}
-          maxPolarAngle={Math.PI * 0.48}
-          autoRotate
-          autoRotateSpeed={presentation.autoRotate}
-        />
+      {/* Camera */}
+      <PerspectiveCamera
+        position={[0, 2, 8]}
+        layers-mask={Layers.Default + Layers.TransparentFX}
+        makeDefault
+      />
 
-        {/* Examples */}
-        <Suspense fallback={<Spinner />}>{children}</Suspense>
-      </Suspense>
+      {/* Camera Controls */}
+      <OrbitControls
+        makeDefault
+        maxDistance={30}
+        minDistance={3}
+        minPolarAngle={0}
+        maxPolarAngle={Math.PI * 0.48}
+        autoRotate
+        autoRotateSpeed={presentation.autoRotate}
+      />
+
+      {/* Examples */}
+      <Suspense fallback={<Spinner />}>{children}</Suspense>
     </RenderComposer>
   )
 }
