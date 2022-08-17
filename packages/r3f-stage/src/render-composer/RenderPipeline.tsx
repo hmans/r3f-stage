@@ -89,7 +89,7 @@ export const RenderPipeline: FC<RenderPipelineProps> = ({
       mipmapBlur: true,
       luminanceThreshold: 1,
       luminanceSmoothing: 0.2,
-      intensity: 3
+      intensity: 2
     } as any)
 
     bloomEffect.inverted = true

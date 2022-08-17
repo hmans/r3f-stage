@@ -1,19 +1,41 @@
-import React from "react"
-import { useApplicationContext } from "./Application"
+import React, { ReactNode } from "react"
+import { Link, Redirect, Route } from "wouter"
+import { FlatStage } from "./stages"
+import { navigationPortal } from "./ui/UI"
 
-export type Example = {
+export type ExampleProps = {
+  children: ReactNode
+  path: string
   title?: string
-  Description?: React.FunctionComponent
-  Example: React.FunctionComponent
+  makeDefault?: boolean
+  stage?: JSX.Element | null
 }
 
-export type Examples = Record<string, Example>
+export const Example = ({
+  children,
+  path,
+  title,
+  makeDefault = false,
+  stage = <FlatStage />
+}: ExampleProps) => {
+  const url = `/examples/${path}`
 
-export function Example() {
-  const { currentExample } = useApplicationContext()
+  return (
+    <>
+      <navigationPortal.Add>
+        <Link to={url}>{title || path}</Link>
+      </navigationPortal.Add>
 
-  if (!currentExample) return null
+      <Route path={url}>
+        {stage}
+        {children}
+      </Route>
 
-  const { Example } = currentExample
-  return <Example />
+      {makeDefault && (
+        <Route path="/">
+          <Redirect to={url} />
+        </Route>
+      )}
+    </>
+  )
 }

@@ -1,9 +1,7 @@
-import { OrbitControls, PerspectiveCamera, useContextBridge } from "@react-three/drei"
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei"
 import { useControls } from "leva"
 import { Perf } from "r3f-perf"
 import React, { FC, ReactNode, Suspense } from "react"
-import { ApplicationContext, useApplicationContext } from "./Application"
-import { Example } from "./Example"
 import { Layers } from "./Layers"
 import { RenderComposer } from "./render-composer"
 import { Spinner } from "./Spinner"
@@ -23,6 +21,7 @@ export type ThreeApplicationProps = {
   /* Enable default lights. */
   lights?: boolean
 }
+
 export const ThreeApplication: FC<ThreeApplicationProps> = ({
   children,
   performance = false,
@@ -41,10 +40,6 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
     autoRotate: { value: 0, min: -10, max: 10 }
   })
 
-  const ContextBridge = useContextBridge(ApplicationContext)
-
-  const { examples } = useApplicationContext()
-
   return (
     <RenderComposer
       dpr={opts.dpr}
@@ -52,58 +47,54 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
       vignette={opts.effects}
       antiAliasing={opts.effects}
     >
-      <ContextBridge>
-        {opts.performance && <Perf position="bottom-right" />}
+      {/* Performance Monitor */}
+      {opts.performance && <Perf position="bottom-right" />}
 
-        <color args={["#222"]} attach="background" />
-        <Suspense>
-          {/* Fog */}
-          <fogExp2 args={["#222", 0.03]} attach="fog" />
+      {/* Background color */}
+      <color args={["#222"]} attach="background" />
 
-          {/* Lights */}
-          {lights && (
-            <>
-              <ambientLight intensity={0.2} />
-              <directionalLight
-                color="white"
-                intensity={0.7}
-                position={[10, 10, 10]}
-                castShadow
-              />
-              <directionalLight
-                color="white"
-                intensity={0.2}
-                position={[-10, 5, 10]}
-                castShadow
-              />
-            </>
-          )}
+      {/* Fog */}
+      <fogExp2 args={["#222", 0.03]} attach="fog" />
 
-          {/* Camera */}
-          <PerspectiveCamera
-            position={[0, 2, 8]}
-            layers-mask={Layers.Default + Layers.TransparentFX}
-            makeDefault
+      {/* Lights */}
+      {lights && (
+        <>
+          <ambientLight intensity={0.2} />
+          <directionalLight
+            color="white"
+            intensity={0.7}
+            position={[10, 10, 10]}
+            castShadow
           />
-
-          {/* Camera Controls */}
-          <OrbitControls
-            makeDefault
-            maxDistance={30}
-            minDistance={3}
-            minPolarAngle={0}
-            maxPolarAngle={Math.PI * 0.48}
-            autoRotate
-            autoRotateSpeed={presentation.autoRotate}
+          <directionalLight
+            color="white"
+            intensity={0.2}
+            position={[-10, 5, 10]}
+            castShadow
           />
+        </>
+      )}
 
-          {/* Examples */}
-          <Suspense fallback={<Spinner />}>{examples && <Example />}</Suspense>
+      {/* Camera */}
+      <PerspectiveCamera
+        position={[0, 2, 8]}
+        layers-mask={Layers.Default + Layers.TransparentFX}
+        makeDefault
+      />
 
-          {/* Additional provided children */}
-          {children}
-        </Suspense>
-      </ContextBridge>
+      {/* Camera Controls */}
+      <OrbitControls
+        makeDefault
+        maxDistance={30}
+        minDistance={3}
+        minPolarAngle={0}
+        maxPolarAngle={Math.PI * 0.48}
+        autoRotate
+        autoRotateSpeed={presentation.autoRotate}
+      />
+
+      {/* Examples */}
+      <Suspense fallback={<Spinner />}>{children}</Suspense>
     </RenderComposer>
   )
 }

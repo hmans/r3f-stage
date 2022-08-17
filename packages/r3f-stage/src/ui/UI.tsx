@@ -1,19 +1,17 @@
 import React from "react"
-import { useApplicationContext } from "../Application"
-import { Description } from "./Description"
-import { Navigation } from "./Navigation"
+import portal from "../lib/portal"
+
+export const uiPortal = portal()
+export const navigationPortal = portal()
 
 export const UI = () => {
-  const { examples, currentExample } = useApplicationContext()
-
   return (
     <>
-      {examples && <Navigation examples={examples} />}
-      {currentExample?.Description && (
-        <Description>
-          <currentExample.Description />
-        </Description>
-      )}
+      <div className="panel" style={{ top: 0, left: 0 }}>
+        <navigationPortal.View />
+      </div>
+
+      <uiPortal.View />
     </>
   )
 }

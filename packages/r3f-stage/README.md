@@ -5,10 +5,14 @@ A pre-configured react-three-fiber environment for demos and examples.
 ## Features
 
 - A fully pre-configured react-three-fiber environment for demos and examples, with camera, lights, environment, orbit controls, postprocessing and performance monitoring already set up for you.
-- If you have multiple examples, it'll provide a navigation UI and a loading indicator while examples are being lazy-loaded.
+- If you have multiple examples, it'll provide a navigation UI and a loading indicator while resources are being loaded (including lazy-loaded components.)
 - Allows the user to control the current resolution of the renderer, and toggle post-processing effects on and off.
 - Comes with [Leva](https://github.com/pmndrs/leva) for easy user controls.
 - No tracking, analytics, or other externally loaded dependencies.
+
+## What does it look like?
+
+[![image](https://user-images.githubusercontent.com/1061/185150441-7532e841-673d-47da-9af2-588469eba818.png)](https://r3f-stage.vercel.app/)
 
 ## Usage
 
@@ -46,62 +50,86 @@ function App() {
 }
 ```
 
-### Multiple Examples
+### Description
 
-If you want to present multiple examples within the same application, you can pass an `examples` prop to `<Application>`. This prop is expected to be an object containing example definitions.
-
-Each property's key will be the URL slug to the example.
-
-The example's optional `title` property will be used as the title of the example in the navigation UI. (If omitted, the key will be used as the title.)
-
-You can provide an optional `Description` React component that will be rendered as the example's description when it's being viewed by the user.
-
-But most importantly, you must provide an `Example` React component. This component should render the actual example.
+R3F Stage provides a `Description` component you can use to render a description of your example at the bottom of the viewport:
 
 ```tsx
-const Dodecahedron = {
-  Description: () => <p>This is a dodecahedron.</p>,
-  Example: () => (
-    <mesh>
-      <dodecahedronGeometry />
-      <meshStandardMaterial />
-    </mesh>
-  )
-}
-
 function App() {
-  return <Application examples={{ Dodecahedron }} />
-}
-```
-
-### Lazy-loading Examples
-
-You can lazy-load individual examples using the `React.lazy` helper. The application is already configured to show a loading spinner while examples are being lazy-loaded.
-
-```tsx
-const Dodecahedron = {
-  Example: React.lazy(() => import("./examples/DodecahedronExample"))
-}
-```
-
-Please note that the modules you lazyload this way **must provide the component as their default export**.
-
-### Stages
-
-R3F Stage exports a collection of stage components you can embed your examples into:
-
-```tsx
-const Dodecahedron = {
-  Example: () => (
-    <FlatStage>
+  return (
+    <Application>
       <mesh>
         <dodecahedronGeometry />
         <meshStandardMaterial />
       </mesh>
-    </FlatStage>
+
+      <Description>
+        This is a really simple example. Let's move on to more interesting things!
+      </Description>
+    </Application>
   )
 }
 ```
+
+### Multiple Examples
+
+You can use R3F Stage for a simple demo, as described above, but it also allows you to provide multiple examples, and will automatically generate a navigation UI for you.
+
+```tsx
+function App() {
+  return (
+    <Application>
+      <Example path="one" title="Example 1" makeDefault>
+        <Description>This is a very simple example.</Description>
+
+        <mesh>
+          <boxGeometry />
+          <meshStandardMaterial color="green" />
+        </mesh>
+      </Example>
+
+      <Example path="two" title="Example 2: The Exampling">
+        <Description>This is also a very simple example.</Description>
+
+        <mesh>
+          <sphereGeometry />
+          <meshStandardMaterial color="white" />
+        </mesh>
+      </Example>
+    </Application>
+  )
+}
+```
+
+> **Note**
+> Take note of the `makeDefault` prop of the first example. This will configure the applicationn to redirect requests to the root path to this example.
+
+### Lazy-loading Examples
+
+Inside examples, you can use all of the tools React provides to you; including using the `React.lazy` helper to lazy-load components the first time they're rendered. While these components and their resources are being loaded, R3F Stage will display an animated loading indicator.
+
+```tsx
+const HugeExample = lazy(() => import("./HugeExample"))
+
+function App() {
+  return (
+    <Application>
+      <Example path="huge" title="Huge Example">
+        <Description>
+          This is an example that uses a lot of resources and uses a long time to load,
+          which is why we're loading it lazily.
+        </Description>
+
+        <HugeExample />
+      </Example>
+
+      {/* ... */}
+    </Application>
+  )
+}
+```
+
+### Stages
 
 _TODO_
 
