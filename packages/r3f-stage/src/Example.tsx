@@ -9,16 +9,9 @@ export type ExampleProps = {
   path: string
   title?: string
   makeDefault?: boolean
-  stage?: JSX.Element | null
 }
 
-export const Example = ({
-  children,
-  path,
-  title,
-  makeDefault = false,
-  stage = <FlatStage />
-}: ExampleProps) => {
+export const Example = ({ children, path, title, makeDefault = false }: ExampleProps) => {
   const url = `/examples/${path}`
 
   return (
@@ -28,10 +21,7 @@ export const Example = ({
       </navigationPortal.Add>
 
       <Route path={url}>
-        <Suspense fallback={<Spinner />}>
-          {stage}
-          {children}
-        </Suspense>
+        <Suspense fallback={<Spinner />}>{children}</Suspense>
       </Route>
 
       {makeDefault && (
