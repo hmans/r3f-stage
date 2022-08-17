@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.3.0-next.5
+
+### Patch Changes
+
+- a0923c6: Use WIP version of tunnel-rat (will switch to package version once the PR is merged.)
+
 ## 0.3.0-next.4
 
 ### Patch Changes
