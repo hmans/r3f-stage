@@ -46,9 +46,6 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
       vignette={opts.effects}
       antiAliasing={opts.effects}
     >
-      {/* Performance Monitor */}
-      {opts.performance && <Perf position="bottom-right" />}
-
       {/* Background color */}
       <color args={["#222"]} attach="background" />
 
@@ -94,6 +91,9 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
 
       {/* Examples */}
       {children}
+
+      {/* Performance Monitor */}
+      {opts.performance && <Perf position="bottom-right" />}
     </RenderComposer>
   )
 }
