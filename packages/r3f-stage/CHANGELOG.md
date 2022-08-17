@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.3.0-next.1
+
+### Minor Changes
+
+- b935faf: **Breaking Change:** move the most important dependencies (three, etc.) back into peer dependencies.
+
 ## 0.3.0-next.0
 
 ### Minor Changes
