@@ -2,8 +2,7 @@
 
 A pre-configured react-three-fiber environment for demos and examples.
 
-![image](https://user-images.githubusercontent.com/1061/185150054-d5f8b406-03e8-44dc-a82e-25c9e6bd808c.png)
-
+![image](https://user-images.githubusercontent.com/1061/185150441-7532e841-673d-47da-9af2-588469eba818.png)
 
 ## Features
 
