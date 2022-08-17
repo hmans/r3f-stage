@@ -1,5 +1,12 @@
 # r3f-stage
 
+## 0.3.0-next.2
+
+### Minor Changes
+
+- 70fe69d: I have no idea what I'm doing.
+- 9c4fa15: Playing with peerDeps is fun!
+
 ## 0.3.0-next.1
 
 ### Minor Changes
