@@ -92,10 +92,7 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
         />
 
         {/* Examples */}
-        <Suspense fallback={<Spinner />}></Suspense>
-
-        {/* Additional provided children */}
-        {children}
+        <Suspense fallback={<Spinner />}>{children}</Suspense>
       </Suspense>
     </RenderComposer>
   )

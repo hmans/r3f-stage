@@ -1,5 +1,8 @@
 import { Application, Description, Example } from "r3f-stage"
 import "r3f-stage/styles.css"
+import React from "react"
+
+const IcosahedronExample = React.lazy(() => import("./examples/IcosahedronExample"))
 
 function App() {
   return (
@@ -15,11 +18,7 @@ function App() {
 
       <Example path="complex" title="Complex">
         <Description>This is a complex example.</Description>
-
-        <mesh>
-          <icosahedronGeometry />
-          <meshStandardMaterial color="hotpink" />
-        </mesh>
+        <IcosahedronExample />
       </Example>
     </Application>
   )
