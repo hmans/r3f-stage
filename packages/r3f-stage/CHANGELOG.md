@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.3.0-next.8
+
+### Patch Changes
+
+- 456e11b: Today was not a good day.
+
 ## 0.3.0-next.7
 
 ### Patch Changes
