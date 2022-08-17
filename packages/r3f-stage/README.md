@@ -2,6 +2,9 @@
 
 A pre-configured react-three-fiber environment for demos and examples.
 
+![image](https://user-images.githubusercontent.com/1061/185150054-d5f8b406-03e8-44dc-a82e-25c9e6bd808c.png)
+
+
 ## Features
 
 - A fully pre-configured react-three-fiber environment for demos and examples, with camera, lights, environment, orbit controls, postprocessing and performance monitoring already set up for you.
