@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.3.0-next.3
+
+### Patch Changes
+
+- c9f4180: Move Suspense into individual examples
+
 ## 0.3.0-next.2
 
 ### Minor Changes
