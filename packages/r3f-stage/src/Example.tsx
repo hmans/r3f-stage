@@ -4,7 +4,7 @@ import { FlatStage } from "./stages"
 import { navigationPortal } from "./ui/UI"
 
 export type ExampleProps = {
-  children: ReactNode
+  children?: ReactNode
   path: string
   title?: string
   makeDefault?: boolean
