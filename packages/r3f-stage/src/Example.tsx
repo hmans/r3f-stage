@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react"
 import { Link, Redirect, Route } from "wouter"
+import { FlatStage } from "./stages"
 import { navigationPortal } from "./ui/UI"
 
 export type ExampleProps = {
@@ -7,9 +8,16 @@ export type ExampleProps = {
   path: string
   title?: string
   makeDefault?: boolean
+  stage?: JSX.Element | null
 }
 
-export const Example = ({ children, path, title, makeDefault = false }: ExampleProps) => {
+export const Example = ({
+  children,
+  path,
+  title,
+  makeDefault = false,
+  stage = <FlatStage />
+}: ExampleProps) => {
   const url = `/examples/${path}`
 
   return (
@@ -18,7 +26,10 @@ export const Example = ({ children, path, title, makeDefault = false }: ExampleP
         <Link to={url}>{title || path}</Link>
       </navigationPortal.Add>
 
-      <Route path={url}>{children}</Route>
+      <Route path={url}>
+        {stage}
+        {children}
+      </Route>
 
       {makeDefault && (
         <Route path="/">

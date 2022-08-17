@@ -131,21 +131,6 @@ function App() {
 
 ### Stages
 
-R3F Stage exports a collection of stage components you can embed your examples into:
-
-```tsx
-const Dodecahedron = {
-  Example: () => (
-    <FlatStage>
-      <mesh>
-        <dodecahedronGeometry />
-        <meshStandardMaterial />
-      </mesh>
-    </FlatStage>
-  )
-}
-```
-
 _TODO_
 
 ## LICENSE

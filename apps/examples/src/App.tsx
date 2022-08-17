@@ -7,8 +7,6 @@ const IcosahedronExample = lazy(() => import("./examples/IcosahedronExample"))
 function App() {
   return (
     <Application>
-      <FlatStage />
-
       <Example path="dodecahedron" title="Dodecahedron" makeDefault>
         <Description>
           <p>
