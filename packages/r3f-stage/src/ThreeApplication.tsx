@@ -1,10 +1,9 @@
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei"
 import { useControls } from "leva"
 import { Perf } from "r3f-perf"
-import React, { FC, ReactNode, Suspense } from "react"
+import React, { FC, ReactNode } from "react"
 import { Layers } from "./Layers"
 import { RenderComposer } from "./render-composer"
-import { Spinner } from "./Spinner"
 
 export type ThreeApplicationProps = {
   children?: ReactNode
@@ -94,7 +93,7 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
       />
 
       {/* Examples */}
-      <Suspense fallback={<Spinner />}>{children}</Suspense>
+      {children}
     </RenderComposer>
   )
 }

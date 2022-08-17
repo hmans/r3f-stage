@@ -1,5 +1,6 @@
-import React, { ReactNode } from "react"
+import React, { ReactNode, Suspense } from "react"
 import { Link, Redirect, Route } from "wouter"
+import { Spinner } from "./Spinner"
 import { FlatStage } from "./stages"
 import { navigationPortal } from "./ui/UI"
 
@@ -27,8 +28,10 @@ export const Example = ({
       </navigationPortal.Add>
 
       <Route path={url}>
-        {stage}
-        {children}
+        <Suspense fallback={<Spinner />}>
+          {stage}
+          {children}
+        </Suspense>
       </Route>
 
       {makeDefault && (
