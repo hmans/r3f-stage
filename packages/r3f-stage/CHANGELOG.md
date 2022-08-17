@@ -1,5 +1,38 @@
 # r3f-stage
 
+## 0.3.0-next.0
+
+### Minor Changes
+
+- b7fb75e: **Breaking Change:** Once more, the way examples are declared has been changed. We now use plain old JSX and some React components for this. Example:
+
+  ```jsx
+  const IcosahedronExample = React.lazy(() => import("./examples/IcosahedronExample"))
+
+  function App() {
+    return (
+      <Application>
+        <Example path="simple" title="Simple" makeDefault>
+          <Description>This is a simple example.</Description>
+
+          <mesh>
+            <boxGeometry />
+            <meshStandardMaterial color="yellow" />
+          </mesh>
+        </Example>
+
+        <Example path="complex" title="Complex">
+          <Description>
+            This is a complex example that is being lazy-loaded, yay!
+          </Description>
+
+          <IcosahedronExample />
+        </Example>
+      </Application>
+    )
+  }
+  ```
+
 ## 0.2.6
 
 ### Patch Changes
