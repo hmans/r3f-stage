@@ -9,16 +9,6 @@ export const Application: FC<ApplicationProps> = ({ ...props }) => {
     <>
       <UI />
       <ThreeApplication {...props} />
-      <RedirectToDefaultExample />
     </>
   )
-}
-
-const RedirectToDefaultExample = () => {
-  // const { examples, currentExample } = useApplicationContext()
-
-  // return currentExample ? null : (
-  //   <Redirect to={examples ? `/examples/${Object.entries(examples)[0][0]}` : "/"} />
-  // )
-  return null
 }
