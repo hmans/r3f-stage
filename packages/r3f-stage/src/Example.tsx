@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
-import { uiPortal } from "./ui/UI"
-import { useRoute, Route } from "wouter"
+import { uiPortal, navigationPortal } from "./ui/UI"
+import { useRoute, Route, Link } from "wouter"
 
 export type ExampleProps = {
   children: ReactNode
@@ -9,7 +9,15 @@ export type ExampleProps = {
 }
 
 export const Example = ({ children, path, title }: ExampleProps) => {
-  return <Route path={`/examples/${path}`}>{children}</Route>
+  return (
+    <>
+      <navigationPortal.Add>
+        <Link to={`/examples/${path}`}>{title || path}</Link>
+      </navigationPortal.Add>
+
+      <Route path={`/examples/${path}`}>{children}</Route>
+    </>
+  )
 }
 
 export type DescriptionProps = { children: React.ReactNode }
