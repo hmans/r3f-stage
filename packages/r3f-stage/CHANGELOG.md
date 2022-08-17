@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.3.0-next.7
+
+### Patch Changes
+
+- c85ea3e: Desperately and foolishly move dependencies back into dependencies. This has not been a fun day.
+
 ## 0.3.0-next.6
 
 ### Patch Changes
