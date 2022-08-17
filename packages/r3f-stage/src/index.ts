@@ -1,4 +1,5 @@
 export { Application } from "./Application"
+export * from "./Example"
 export { Layers } from "./Layers"
 export { useRenderPipeline } from "./render-composer"
 export * from "./stages"
