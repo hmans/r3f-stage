@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.3.0-next.4
+
+### Patch Changes
+
+- d377c10: Don't set a stage by default. Let the user use plain JSX.
+
 ## 0.3.0-next.3
 
 ### Patch Changes
