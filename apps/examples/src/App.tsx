@@ -7,9 +7,8 @@ const IcosahedronExample = React.lazy(() => import("./examples/IcosahedronExampl
 function App() {
   return (
     <Application>
-      <Example path="simple" title="Simple">
-        <Description>This is a simple example.</Description>
-
+      <Example path="simple" title="Simple" makeDefault>
+        <Description>This is a simple example.</Description>Œ
         <mesh>
           <boxGeometry />
           <meshStandardMaterial color="yellow" />
