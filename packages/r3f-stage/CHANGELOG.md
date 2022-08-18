@@ -1,5 +1,15 @@
 # r3f-stage
 
+## 0.3.0-next.9
+
+### Minor Changes
+
+- a599b5e: Extracted our implementation of render-composer into a standalong `render-composer` package that we're also now using, yay!
+
+### Patch Changes
+
+- b1f3a3a: Upgrade render-composer
+
 ## 0.3.0-next.8
 
 ### Patch Changes
