@@ -69,7 +69,7 @@
     "leva": "^0.9.30",
     "postprocessing": "^6.28.5",
     "r3f-perf": "^6.4.4",
-    "render-composer": "^0.1.1",
+    "render-composer": "^0.1.4",
     "wouter": "^2.8.0-alpha.2",
     "zustand": "^3.6.9"
   },
