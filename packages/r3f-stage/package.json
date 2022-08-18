@@ -33,6 +33,7 @@
     "@babel/preset-env": "^7.18.10",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
+    "@react-three/fiber": "^8.3.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@types/jest": "^28.1.7",
@@ -44,6 +45,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^3.0.2",
+    "three": ">=0.143.0",
     "ts-jest": "^28.0.8",
     "tslib": "^2.4.0",
     "typedoc": "^0.23.10",
@@ -64,16 +66,16 @@
   },
   "dependencies": {
     "@react-three/drei": "^9.22.7",
-    "@react-three/fiber": "^8.3.1",
     "leva": "^0.9.30",
     "postprocessing": "^6.28.5",
     "r3f-perf": "^6.4.4",
-    "three": ">=0.143.0",
     "wouter": "^2.8.0-alpha.2",
     "zustand": "^3.6.9"
   },
   "peerDependencies": {
+    "@react-three/fiber": "^8.3.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "three": ">=0.143.0"
   }
 }
