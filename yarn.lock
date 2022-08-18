@@ -6054,6 +6054,11 @@ regjsparser@^0.8.2:
   dependencies:
     jsesc "~0.5.0"
 
+render-composer@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/render-composer/-/render-composer-0.1.1.tgz#4d7b2a9069ccc9c08638432f5f3650bba1d9bb8b"
+  integrity sha512-JRBX4e6c/yFdLMKT0uReFRUMi1xE/ubBHKSii8ip9hihjkmyRPk32oGiChwhJfLBWpXCS0R2MlmF+2jhvCUGdA==
+
 repeat-element@^1.1.2:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/repeat-element/-/repeat-element-1.1.4.tgz#be681520847ab58c7568ac75fbfad28ed42d39e9"
