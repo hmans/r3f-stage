@@ -10,12 +10,9 @@ function App() {
       <Example path="dodecahedron" title="Dodecahedron" makeDefault>
         <Description>
           <p>
-            In geometry, a <strong>dodecahedron</strong> or duodecahedron is any
-            polyhedron with twelve flat faces. The most familiar dodecahedron is the
-            regular dodecahedron with regular pentagons as faces, which is a Platonic
-            solid. There are also three regular star dodecahedra, which are constructed as
-            stellations of the convex form. All of these have icosahedral symmetry, order
-            120.
+            In geometry, a <strong>dodecahedron</strong> is any polyhedron with twelve
+            flat faces. The most familiar dodecahedron is the regular dodecahedron with
+            regular pentagons as faces, which is a Platonic solid.
           </p>
         </Description>
 
