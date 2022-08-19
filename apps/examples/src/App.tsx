@@ -1,4 +1,4 @@
-import { Application, Description, Example, FlatStage } from "r3f-stage"
+import { Application, Description, Example, Heading } from "r3f-stage"
 import "r3f-stage/styles.css"
 import { lazy } from "react"
 
@@ -7,6 +7,8 @@ const IcosahedronExample = lazy(() => import("./examples/IcosahedronExample"))
 function App() {
   return (
     <Application>
+      <Heading>Cool Examples</Heading>
+
       <Example path="dodecahedron" title="Dodecahedron" makeDefault>
         <Description>
           <p>
@@ -33,6 +35,8 @@ function App() {
         </Description>
         <IcosahedronExample />
       </Example>
+
+      <Heading>Dumb Examples</Heading>
 
       <Example path="sphere" title="Sphere">
         <Description>Look, it's just like any other ball, okay?</Description>

@@ -18,6 +18,17 @@ body {
   color: #f2f2f2;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  font-weight: bold;
+  color: #ff9770;
+}
+
 a {
   font-weight: bold;
   display: block;
@@ -26,7 +37,7 @@ a {
 }
 
 a:hover {
-  color: hotpink;
+  color: #ff70a6;
 }
 
 div#root,
