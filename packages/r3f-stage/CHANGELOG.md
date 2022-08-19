@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.3.1
+
+### Patch Changes
+
+- f90dd83: Add `<Heading>`, a component that allows the user to split the list of examples with a heading.
+
 ## 0.3.0
 
 ### Minor Changes
