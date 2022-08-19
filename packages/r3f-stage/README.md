@@ -129,6 +129,27 @@ function App() {
 }
 ```
 
+### Headings
+
+To give your examples some extra structure, you may use the `<Heading>` component to insert headings into the example navigation:
+
+```tsx
+function App() {
+  return (
+    <Application>
+      <Heading>Main Examples</Heading>
+      <Example />
+      <Example />
+
+      <Heading>Extra Examples</Heading>
+      <Example />
+      <Example />
+      <Example />
+    </Application>
+  )
+}
+```
+
 ### Stages
 
 _TODO_
