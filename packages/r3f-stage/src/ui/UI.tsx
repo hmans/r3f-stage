@@ -1,17 +1,19 @@
 import React from "react"
 import tunnel from "../lib/tunnel-rat"
 
-export const uiPortal = tunnel()
-export const navigationPortal = tunnel()
+export const descriptionTunnel = tunnel()
+export const navigationTunnel = tunnel()
 
 export const UI = () => {
   return (
     <>
       <div className="panel" style={{ top: 0, left: 0 }}>
-        <navigationPortal.Out />
+        <navigationTunnel.Out />
       </div>
 
-      <uiPortal.Out />
+      <div className="panel description" style={{ bottom: 0, left: 0 }}>
+        <descriptionTunnel.Out />
+      </div>
     </>
   )
 }

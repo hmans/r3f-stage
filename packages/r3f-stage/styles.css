@@ -66,3 +66,9 @@ div.panel > *:first-child {
 div.panel > *:last-child {
   margin-bottom: 0;
 }
+
+/* Description */
+
+div.description {
+  font-size: 130%;
+}

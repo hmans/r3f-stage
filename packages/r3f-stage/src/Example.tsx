@@ -1,7 +1,7 @@
 import React, { ReactNode, Suspense } from "react"
 import { Link, Redirect, Route } from "wouter"
 import { Spinner } from "./Spinner"
-import { navigationPortal } from "./ui/UI"
+import { navigationTunnel } from "./ui/UI"
 
 export type ExampleProps = {
   children?: ReactNode
@@ -15,9 +15,9 @@ export const Example = ({ children, path, title, makeDefault = false }: ExampleP
 
   return (
     <>
-      <navigationPortal.In>
+      <navigationTunnel.In>
         <Link to={url}>{title || path}</Link>
-      </navigationPortal.In>
+      </navigationTunnel.In>
 
       <Route path={url}>
         <Suspense fallback={<Spinner />}>{children}</Suspense>
