@@ -6054,10 +6054,10 @@ regjsparser@^0.8.2:
   dependencies:
     jsesc "~0.5.0"
 
-render-composer@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/render-composer/-/render-composer-0.1.4.tgz#16b42fc3d04093e1769da2ce88544290da838257"
-  integrity sha512-KUo09pGW0ahtqJ5xycaXRfAq5AfJym1jcL9A/xbZFAhKJQ0iv1aP1xx8XmN2i/5hkIWuquI0OAYu0vMY4thNtw==
+render-composer@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/render-composer/-/render-composer-0.1.5.tgz#46f7f1fa6eb0d1c5e542763eabde89060473b4a4"
+  integrity sha512-ikCaT5jbT5gbuAZNQhO7NR3RP2cfuLZ0mw2aHcNj0wZzSmLMO5TgcPgB52RIMFaxe5OkzSf3+AIz8MduKI5rhA==
 
 repeat-element@^1.1.2:
   version "1.1.4"
