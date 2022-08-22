@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.3.2
+
+### Patch Changes
+
+- 19a4b64: Relax peerDependencies versions a little.
+
 ## 0.3.1
 
 ### Patch Changes
