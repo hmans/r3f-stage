@@ -1,5 +1,11 @@
 # r3f-stage
 
+## 0.3.3
+
+### Patch Changes
+
+- 6ea2936: The Rendering and Presentation options have been merged into a single Leva panel, which is now collapsed by default.
+
 ## 0.3.2
 
 ### Patch Changes
