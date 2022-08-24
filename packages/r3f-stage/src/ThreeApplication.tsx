@@ -29,22 +29,23 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
   lights = true
 }) => {
   /* Let the user control some aspects of the application. */
-  const opts = useControls("Rendering", {
-    dpr: { value: dpr, min: 0.125, max: 2 },
-    effects,
-    performance
-  })
-
-  const presentation = useControls("Presentation", {
-    autoRotate: { value: 0, min: -10, max: 10 }
-  })
+  const controls = useControls(
+    "Presentation Options",
+    {
+      dpr: { value: dpr, min: 0.125, max: 2 },
+      effects,
+      performance,
+      autoRotate: { value: 0, min: -10, max: 10 }
+    },
+    { collapsed: true }
+  )
 
   return (
-    <RenderCanvas dpr={opts.dpr}>
+    <RenderCanvas dpr={controls.dpr}>
       <RenderPipeline
-        bloom={opts.effects}
-        vignette={opts.effects}
-        antiAliasing={opts.effects}
+        bloom={controls.effects}
+        vignette={controls.effects}
+        antiAliasing={controls.effects}
       >
         {/* Background color */}
         <color args={["#222"]} attach="background" />
@@ -86,14 +87,14 @@ export const ThreeApplication: FC<ThreeApplicationProps> = ({
           minPolarAngle={0}
           maxPolarAngle={Math.PI * 0.48}
           autoRotate
-          autoRotateSpeed={presentation.autoRotate}
+          autoRotateSpeed={controls.autoRotate}
         />
 
         {/* Examples */}
         {children}
 
         {/* Performance Monitor */}
-        {opts.performance && <Perf position="bottom-right" />}
+        {controls.performance && <Perf position="bottom-right" />}
       </RenderPipeline>
     </RenderCanvas>
   )
