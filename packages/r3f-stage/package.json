@@ -71,7 +71,7 @@
     "r3f-perf": "^6.4.4",
     "render-composer": "^0.1.5",
     "wouter": "^2.8.0-alpha.2",
-    "zustand": "^3.6.9"
+    "zustand": "^4.1.1"
   },
   "peerDependencies": {
     "@react-three/fiber": ">=8.3.1",
