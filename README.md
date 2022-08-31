@@ -1,1 +1,1 @@
-packages/r3f-stage/README.md
+### This repository has moved into the [Composer Suite Monorepo](https://github.com/hmans/composer-suite).

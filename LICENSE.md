@@ -1,1 +1,0 @@
-packages/r3f-stage/LICENSE.md
